@@ -14,7 +14,7 @@ RUN apt-get -y update && apt-get -y upgrade && \
     apt-get -y install cmake python-pip libboost-all-dev qtdeclarative5-dev qt5-default libopencv-dev python-opencv  libcurl4-gnutls-dev openjdk-8-jdk  pkg-config zip g++ zlib1g-dev unzip python curl bazel && apt-get -y autoremove
 
 WORKDIR /
-RUN wget https://github.com/tensorflow/tensorflow/archive/v1.9.0.tar.gz && tar -xvzf v1.10.1.tar.gz  && mv tensorflow-1.10.1 tensorflow
+RUN wget https://github.com/tensorflow/tensorflow/archive/v1.9.0.tar.gz && tar -xvzf v1.9.0.tar.gz  && mv tensorflow-1.9.0 tensorflow
 
 WORKDIR /tensorflow
 RUN ./configure (without CUDA and without all other stuff)
