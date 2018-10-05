@@ -17,7 +17,7 @@ WORKDIR /
 RUN wget https://github.com/tensorflow/tensorflow/archive/v1.9.0.tar.gz && tar -xvzf v1.9.0.tar.gz  && mv tensorflow-1.9.0 tensorflow
 
 WORKDIR /tensorflow
-RUN ./configure (without CUDA and without all other stuff)
+RUN ./configure 
 RUN bazel build --jobs=6 --verbose_failures -c opt --copt=-mavx --copt=-mfpmath=both --copt=-msse4.2 //tensorflow:libtensorflow_cc.so
 
 #WORKDIR /
